@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="containerMain">
+
+            <form class="containerForm">
+                <div class="convert">
+                    <label for="converterDe">Converter <span>de</span></label>
+
+                    <select name="converterDe" id="converterDe">
+                        <option>R$ Real Brasileiro</option>
+                        <option>US$ Dólar Americano</option>
+                    </select>
+                </div>
+
+                <div class="convert">
+                    <label for="converterPara">Converter <span>para</span></label>
+
+                    <select name="converterPara" id="converterPara">
+                        <option>US$ Dólar Americano</option>
+                        <option>R$ Real Brasileiro</option>
+                    </select>
+                </div>
+
+                <div class="value">
+                    <label for="valor">Valor</label>
+
+                    <input type="number" id="valor" name="valor" placeholder="Digite o valor">
+                </div>
+
+                <button class="myButton">Converter</button>
+
+            </form>
+
+            <section>
+                <div class="containerResult">
+
+                    <div class="convertFrom">
+
+                        <figure>
+                            <img class="money1" src="./assets/real.png" alt="Bandeira do Brasil">
+
+                            <figcaption>Real</figcaption>
+                        </figure>
+
+                        <p class="valueOne">R$ 0,00</p>
+
+                    </div>
+
+                    <div class="arrowContainer">
+                        <img class="arrow" src="./assets/seta.png" alt="Seta para baixo">
+                    </div>
+
+                    <div class="convertTo">
+
+                        <figure>
+                            <img class="money2" src="./assets/dolar.png" alt="Bandeira dos Estados Unidos">
+
+                            <figcaption>Dólar Americano</figcaption>
+                        </figure>
+
+                        <p class="valueTwo"> US$ 0.00</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
