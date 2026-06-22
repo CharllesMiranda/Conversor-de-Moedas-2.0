@@ -21,20 +21,20 @@
             <form class="containerForm">
 
                 <div class="convert">
-                    <label for="converterDe">Converter <span>de</span></label>
+                    <label for="inputConvertFrom">Converter <span>de</span></label>
 
-                    <select name="converterDe" id="converterDe">
+                    <select name="converterDe" id="inputConvertFrom">
                         <option>R$ Real Brasileiro</option>
                         <option>US$ Dólar Americano</option>
                     </select>
                 </div>
 
                 <div class="convert">
-                    <label for="converterPara">Converter <span>para</span></label>
+                    <label for="inputConvertTo">Converter <span>para</span></label>
 
-                    <select name="converterPara" id="converterPara">
-                        <option>US$ Dólar Americano</option>
-                        <option>R$ Real Brasileiro</option>
+                    <select name="converterPara" id="inputConvertTo">
+                        <option value="dolar">US$ Dólar Americano</option>
+                        <option value="euro">€ Euro</option>
                     </select>
                 </div>
 
@@ -72,7 +72,7 @@
                         <figure>
                             <img class="money2" src="./assets/dolar.png" alt="Bandeira dos Estados Unidos">
 
-                            <figcaption>Dólar Americano</figcaption>
+                            <figcaption class="currencyName">Dólar Americano</figcaption>
                         </figure>
 
                         <p class="valueTwo"> US$ 0.00</p>
