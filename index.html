@@ -17,15 +17,16 @@
     <main>
 
         <div class="containerMain">
-
             <form class="containerForm">
 
                 <div class="convert">
                     <label for="inputConvertFrom">Converter <span>de</span></label>
 
                     <select name="converterDe" id="inputConvertFrom">
-                        <option>R$ Real Brasileiro</option>
-                        <option>US$ Dólar Americano</option>
+                        <option value="real">R$ Real Brasileiro</option>
+                        <option value="dolar">US$ Dólar Americano</option>
+                        <option value="euro">€ Euro</option>
+                        <option value="libra">£ Libra</option>
                     </select>
                 </div>
 
@@ -33,14 +34,15 @@
                     <label for="inputConvertTo">Converter <span>para</span></label>
 
                     <select name="converterPara" id="inputConvertTo">
+                        <option value="real">R$ Real Brasileiro</option>
                         <option value="dolar">US$ Dólar Americano</option>
                         <option value="euro">€ Euro</option>
+                        <option value="libra">£ Libra</option>
                     </select>
                 </div>
 
                 <div class="value">
                     <label for="valueToConvert">Valor</label>
-
                     <input type="number" id="valueToConvert" name="valor" placeholder="Digite o valor">
                 </div>
 
@@ -52,10 +54,8 @@
                 <div class="containerResult">
 
                     <div class="convertFrom">
-
                         <figure>
                             <img class="money1" src="./assets/real.png" alt="Bandeira do Brasil">
-
                             <figcaption>Real</figcaption>
                         </figure>
 
@@ -71,18 +71,15 @@
 
                         <figure>
                             <img class="money2" src="./assets/dolar.png" alt="Bandeira dos Estados Unidos">
-
                             <figcaption class="currencyName">Dólar Americano</figcaption>
                         </figure>
 
                         <p class="valueTwo"> US$ 0.00</p>
 
                     </div>
-
+                    
                 </div>
-
             </section>
-
         </div>
 
     </main>

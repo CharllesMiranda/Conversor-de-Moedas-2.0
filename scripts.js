@@ -6,8 +6,17 @@ function convertValues() {
     const valueForConversion = document.querySelector(".valueOne")
     const ConvertedValue = document.querySelector(".valueTwo")
 
+    const realToday = 1
     const dolarToday = 5.20
     const euroToday = 6.20
+    const libraToday = 6.80
+
+    if (inputConvertTo.value == "real") {
+        ConvertedValue.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(valueToConvert / realToday)
+    }
 
     if (inputConvertTo.value == "dolar") {
         ConvertedValue.innerHTML = new Intl.NumberFormat("en-US", {
@@ -23,10 +32,14 @@ function convertValues() {
         }).format(valueToConvert / euroToday)
     }
 
-    valueForConversion.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(valueToConvert)
+    if (inputConvertTo.value == "libra") {
+        ConvertedValue.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(valueToConvert / libraToday)
+    }
+
+    
 
 }
 
@@ -34,6 +47,11 @@ function changedCurrency() {
     const money2 = document.querySelector(".money2")
     const currencyName = document.querySelector(".currencyName")
     const valueTwo = document.querySelector(".valueTwo")
+
+    if (inputConvertTo.value == "real") {
+        money2.src = "./assets/real.png"
+        currencyName.innerHTML = "Real Brasileiro"  
+    }
 
     if (inputConvertTo.value == "dolar") {
         money2.src = "./assets/dolar.png"
@@ -43,6 +61,11 @@ function changedCurrency() {
     if (inputConvertTo.value == "euro") {
         money2.src = "./assets/euro.png"
         currencyName.innerHTML = "Euro"
+    }
+
+    if (inputConvertTo.value == "libra") {
+        money2.src = "./assets/libra.png"
+        currencyName.innerHTML = "Libra"
     }
 
     convertValues()
