@@ -1,9 +1,26 @@
 const convertButton = document.querySelector(".myButton")
+const inputConvertFrom = document.querySelector("#inputConvertFrom")
 const inputConvertTo = document.querySelector("#inputConvertTo")
+
+
+function editCurrency () {
+    const valueToConvert = document.querySelector("#valueToConvert").value
+    const valueForConversion = document.querySelector(".valueOne")
+
+    if (inputConvertFrom.value == "real") {
+        valueForConversion.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(valueToConvert)
+    }
+}
+
+
+
 
 function convertValues() {
     const valueToConvert = document.querySelector("#valueToConvert").value
-    const valueForConversion = document.querySelector(".valueOne")
+    const amountToBeConverted = document.querySelector(".valueOne")
     const ConvertedValue = document.querySelector(".valueTwo")
 
     const realToday = 1
@@ -39,7 +56,11 @@ function convertValues() {
         }).format(valueToConvert / libraToday)
     }
 
-    
+    amountToBeConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(valueToConvert)
+
 
 }
 
@@ -71,5 +92,6 @@ function changedCurrency() {
     convertValues()
 }
 
+inputConvertFrom.addEventListener("change", editCurrency)
 inputConvertTo.addEventListener("change", changedCurrency)
 convertButton.addEventListener("click", convertValues)
