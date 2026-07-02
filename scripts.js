@@ -15,13 +15,10 @@ function editCurrency () {
     }
 }
 
-
-
-
 function convertValues() {
     const valueToConvert = document.querySelector("#valueToConvert").value
     const amountToBeConverted = document.querySelector(".valueOne")
-    const ConvertedValue = document.querySelector(".valueTwo")
+    const convertedValue = document.querySelector(".valueTwo")
 
     const realToday = 1
     const dolarToday = 5.20
@@ -29,28 +26,28 @@ function convertValues() {
     const libraToday = 6.80
 
     if (inputConvertTo.value == "real") {
-        ConvertedValue.innerHTML = new Intl.NumberFormat("pt-BR", {
+        convertedValue.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
         }).format(valueToConvert / realToday)
     }
 
     if (inputConvertTo.value == "dolar") {
-        ConvertedValue.innerHTML = new Intl.NumberFormat("en-US", {
+        convertedValue.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
         }).format(valueToConvert / dolarToday)
     }
 
     if (inputConvertTo.value == "euro") {
-        ConvertedValue.innerHTML = new Intl.NumberFormat("de-DE", {
+        convertedValue.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
         }).format(valueToConvert / euroToday)
     }
 
     if (inputConvertTo.value == "libra") {
-        ConvertedValue.innerHTML = new Intl.NumberFormat("en-GB", {
+        convertedValue.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
             currency: "GBP"
         }).format(valueToConvert / libraToday)
@@ -60,7 +57,6 @@ function convertValues() {
             style: "currency",
             currency: "BRL"
         }).format(valueToConvert)
-
 
 }
 
