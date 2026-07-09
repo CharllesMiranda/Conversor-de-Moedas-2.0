@@ -10,9 +10,9 @@ const valueTwo = document.querySelector(".valueTwo")                            
 
 
 const realToday = 1
-const dolarToday = 5
-const euroToday = 6
-const libraToday = 7
+const dolarToday = 5.16
+const euroToday = 5.90
+const libraToday = 6.92
 
 function convertMoney(valueMoney, coin) {                                       // Valor do dinheiro e Moeda                                           // Converter dinheiro
 
